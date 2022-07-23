@@ -7,7 +7,7 @@ import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { Button } from '@mui/material';
 const Home: NextPage = () => {
-  const [data, setData] = useState();
+  const [data, setData] = useState<any[]>([]);
   const getInitData = async () => {
     const res = await axios.get(
       'https://api.nasa.gov/planetary/apod?api_key=dnnDtxf50g4Q3eTOaedSyJKopIwXT0v7akqYh9Y3'
