@@ -14,14 +14,15 @@
 .imgContainer {
   border: 3px solid red;
   position: relative;
+  width: 100%;
 }
 
-/* line 13, ../../../Documents/GitHub/cleveland_stargazer_society/styles/scss/Home.module.scss */
+/* line 15, ../../../Documents/GitHub/cleveland_stargazer_society/styles/scss/Home.module.scss */
 .imgContainer img {
   position: relative;
 }
 
-/* line 16, ../../../Documents/GitHub/cleveland_stargazer_society/styles/scss/Home.module.scss */
+/* line 22, ../../../Documents/GitHub/cleveland_stargazer_society/styles/scss/Home.module.scss */
 .imgContainer p {
   padding: 10px;
   background-color: rgba(0, 0, 0, 0.3);

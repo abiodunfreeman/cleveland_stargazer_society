@@ -10,8 +10,14 @@
 .imgContainer {
   border: 3px solid red;
   position: relative;
+  width: 100%;
+  //   position: unset !important;
   img {
     position: relative;
+    // object-fit: contain;
+    // width: 100% !important;
+    // position: relative !important;
+    // height: unset !important;
   }
   p {
     padding: 10px;

@@ -3,6 +3,7 @@ import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import Header from '../components/Header';
 import axios from 'axios';
+import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { Button } from '@mui/material';
 const Home: NextPage = () => {
@@ -40,7 +41,13 @@ const Home: NextPage = () => {
           <h1 className="text-2xl font-bold m-3 text-center">{data.title}</h1>
 
           <div className={styles.imgContainer}>
-            <img src={data.hdurl} alt={data.title} />
+            <Image
+              priority
+              width={1080}
+              height={810}
+              src={data.hdurl}
+              alt={data.title}
+            />
             {data.copyright && <p>© {data.copyright}</p>}
           </div>
           <p>{data.date}</p>
