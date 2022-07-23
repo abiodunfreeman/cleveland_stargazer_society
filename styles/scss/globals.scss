@@ -20,9 +20,17 @@ body {
 }
 #displayData {
   border: 8px solid blue;
+  // height: 80vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   max-width: 800px;
   gap: 1rem;
+}
+#btnContainer {
+  display: flex;
+  border: 3px solid red;
+  width: 100%;
+  max-width: 800px;
+  padding: 2rem;
 }
