@@ -37,7 +37,12 @@ const Home: NextPage = () => {
 
       <Header />
       <main className="border-8 border-purple-900 lg:p-8 lg:flex md:flex-col md:items-center lg:justify-center sm:p-0 ">
-        <section className="lg:p-8 md:p-8" id="displayData">
+        <section className="" id="btnContainer">
+          <Button variant="outlined" onClick={() => getRandomData()}>
+            Get a Random Image
+          </Button>
+        </section>
+        <section className="lg:p-8 md:p-8 p-4" id="displayData">
           <h1 className="text-2xl font-bold m-3 text-center">{data.title}</h1>
 
           <div className={styles.imgContainer}>
@@ -52,11 +57,6 @@ const Home: NextPage = () => {
           </div>
           <p>{data.date}</p>
           <h2 className="border-4 border-white lg:p-4 ">{data.explanation}</h2>
-        </section>
-        <section className="" id="btnContainer">
-          <Button variant="outlined" onClick={() => getRandomData()}>
-            Get a Random Image
-          </Button>
         </section>
       </main>
     </div>

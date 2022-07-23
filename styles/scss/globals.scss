@@ -19,7 +19,7 @@ body {
   background-image: url('../assets/background-stars.svg');
 }
 #displayData {
-  border: 8px solid blue;
+  // border: 8px solid blue;
   // height: 80vh;
   display: flex;
   flex-direction: column;
@@ -29,7 +29,7 @@ body {
 }
 #btnContainer {
   display: flex;
-  border: 3px solid red;
+  // border: 3px solid red;
   width: 100%;
   max-width: 800px;
   padding: 2rem;
