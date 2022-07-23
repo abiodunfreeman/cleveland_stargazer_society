@@ -1,8 +1,33 @@
+/* line 1, ../../../Documents/GitHub/cleveland_stargazer_society/styles/scss/Home.module.scss */
 .container {
-  border: 8px solid red;
+  border: 8px solid yellowgreen;
   min-height: 100vh;
-  width: 100vw;
+  max-width: 100vw;
 }
+
+/* line 7, ../../../Documents/GitHub/cleveland_stargazer_society/styles/scss/Home.module.scss */
 .header {
   border: 3px solid white;
 }
+
+/* line 10, ../../../Documents/GitHub/cleveland_stargazer_society/styles/scss/Home.module.scss */
+.imgContainer {
+  border: 3px solid red;
+  position: relative;
+}
+
+/* line 13, ../../../Documents/GitHub/cleveland_stargazer_society/styles/scss/Home.module.scss */
+.imgContainer img {
+  position: relative;
+}
+
+/* line 16, ../../../Documents/GitHub/cleveland_stargazer_society/styles/scss/Home.module.scss */
+.imgContainer p {
+  padding: 10px;
+  background-color: rgba(0, 0, 0, 0.3);
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+}
+
+/*# sourceMappingURL=Home.module.css.map */

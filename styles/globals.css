@@ -1,20 +1,34 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-
+/* line 5, ../../../Documents/GitHub/cleveland_stargazer_society/styles/scss/globals.scss */
 html,
 body {
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen, Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
 }
 
+/* line 11, ../../../Documents/GitHub/cleveland_stargazer_society/styles/scss/globals.scss */
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
+
+/* line 16, ../../../Documents/GitHub/cleveland_stargazer_society/styles/scss/globals.scss */
 body {
   color: whitesmoke;
   background-color: #07071d;
-  background-image: url('../assets/background-stars.svg');
+  background-image: url("../assets/background-stars.svg");
 }
+
+/* line 21, ../../../Documents/GitHub/cleveland_stargazer_society/styles/scss/globals.scss */
+#displayData {
+  border: 8px solid blue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 800px;
+  gap: 1rem;
+}
+
+/*# sourceMappingURL=globals.css.map */

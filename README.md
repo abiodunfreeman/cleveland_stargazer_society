@@ -8,4 +8,5 @@ A single page web application that uses the nasa api
 <li>React</lI>
 <li>Next js</li>
 <li>Tailwind</li>
+<li>SCSS</li>
 </ul>
