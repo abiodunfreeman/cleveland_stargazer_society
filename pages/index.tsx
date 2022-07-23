@@ -27,7 +27,7 @@ const Home: NextPage = () => {
     setData(res.data[0]);
   };
   const newDate = DateTime.fromISO(data.date).toLocaleString(
-    DateTime.DATETIME_MED
+    DateTime.DATE_FULL
   );
   console.log(newDate);
   console.log(data);
