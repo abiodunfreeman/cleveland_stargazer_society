@@ -6,6 +6,7 @@ import axios from 'axios';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { Button } from '@mui/material';
+import { DateTime } from 'luxon';
 const Home: NextPage = () => {
   const [data, setData] = useState<any>();
   const getInitData = async () => {
@@ -25,7 +26,10 @@ const Home: NextPage = () => {
 
     setData(res.data[0]);
   };
-
+  const newDate = DateTime.fromISO(data.date).toLocaleString(
+    DateTime.DATETIME_MED
+  );
+  console.log(newDate);
   console.log(data);
   return data ? (
     <div className={styles.container}>
@@ -55,7 +59,7 @@ const Home: NextPage = () => {
             />
             {data.copyright && <p>© {data.copyright}</p>}
           </div>
-          <p>{data.date}</p>
+          <p>{newDate}</p>
           <h2 className="border-4 border-white lg:p-4 ">{data.explanation}</h2>
         </section>
       </main>
