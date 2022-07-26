@@ -31,6 +31,28 @@ body {
 }
 
 /* line 31, ../../../Documents/GitHub/cleveland_stargazer_society/styles/scss/globals.scss */
+.f {
+  border: 3px solid white;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  margin-left: 20px;
+  padding: 10px;
+}
+
+/* line 37, ../../../Documents/GitHub/cleveland_stargazer_society/styles/scss/globals.scss */
+.f label {
+  color: white;
+  padding: 4px;
+}
+
+/* line 41, ../../../Documents/GitHub/cleveland_stargazer_society/styles/scss/globals.scss */
+.f input {
+  color: black;
+  font-weight: 700;
+}
+
+/* line 47, ../../../Documents/GitHub/cleveland_stargazer_society/styles/scss/globals.scss */
 #btnContainer {
   display: flex;
   width: 100%;
@@ -38,7 +60,7 @@ body {
   padding: 2rem;
 }
 
-/* line 38, ../../../Documents/GitHub/cleveland_stargazer_society/styles/scss/globals.scss */
+/* line 54, ../../../Documents/GitHub/cleveland_stargazer_society/styles/scss/globals.scss */
 #main-container {
   display: flex;
   flex-direction: column;

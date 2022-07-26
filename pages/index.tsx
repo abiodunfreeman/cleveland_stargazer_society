@@ -73,6 +73,17 @@ const Home: NextPage = () => {
       <AbsolutelyPositionedPlayer />
     </RelativePositionWrapper>
   );
+
+  const onCalChange = async () => {
+    const chosenDate = document.getElementById('cal').value;
+    const res = await axios.get(
+      `https://api.nasa.gov/planetary/apod?date=${chosenDate}&api_key=dnnDtxf50g4Q3eTOaedSyJKopIwXT0v7akqYh9Y3`
+    );
+    const newDate: any = DateTime.fromISO(res.data.date).toLocaleString(
+      DateTime.DATE_FULL
+    );
+    setData({ ...res.data, date: newDate });
+  };
   return data ? (
     <div className={styles.container}>
       <Head>
@@ -87,6 +98,15 @@ const Home: NextPage = () => {
           <Button variant="outlined" onClick={() => getRandomData()}>
             Get a Random Image
           </Button>
+          <div className="f">
+            <label htmlFor="cal">choose the date</label>
+            <input
+              id="cal"
+              name="cal"
+              type="date"
+              onChange={e => onCalChange(e)}
+            />
+          </div>
         </section>
         <section className="lg:p-8 md:p-8 p-4" id="displayData">
           <h1 className="text-2xl font-bold m-3 text-center">{data.title}</h1>
