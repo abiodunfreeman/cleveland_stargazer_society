@@ -17,10 +17,11 @@ const Home: NextPage = () => {
     const res = await axios.get(
       'https://api.nasa.gov/planetary/apod?api_key=dnnDtxf50g4Q3eTOaedSyJKopIwXT0v7akqYh9Y3'
     );
-    setData({ ...res.data, date: newDate });
     const newDate: any = DateTime.fromISO(res.data.date).toLocaleString(
       DateTime.DATE_FULL
     );
+    setData({ ...res.data, date: newDate });
+
     console.log(newDate);
     console.log(data);
   };
