@@ -34,3 +34,10 @@ body {
   max-width: 800px;
   padding: 2rem;
 }
+#main-container {
+  border: 6px solid blue;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+}

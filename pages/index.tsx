@@ -1,4 +1,6 @@
 import type { NextPage } from 'next';
+import React from 'react';
+import ReactPlayer from 'react-player';
 import Head from 'next/head';
 import styles from '../styles/Home.module.css';
 import Header from '../components/Header';
@@ -7,30 +9,68 @@ import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { Button } from '@mui/material';
 import { DateTime } from 'luxon';
+import styled from 'styled-components';
+
 const Home: NextPage = () => {
   const [data, setData] = useState<any>();
   const getInitData = async () => {
     const res = await axios.get(
       'https://api.nasa.gov/planetary/apod?api_key=dnnDtxf50g4Q3eTOaedSyJKopIwXT0v7akqYh9Y3'
     );
-    setData(res.data);
+    setData({ ...res.data, date: newDate });
+    const newDate: any = DateTime.fromISO(res.data.date).toLocaleString(
+      DateTime.DATE_FULL
+    );
+    console.log(newDate);
+    console.log(data);
   };
   useEffect(() => {
     getInitData();
   }, []);
-
+  var playerProps: any = { playing: true };
+  useEffect(() => {
+    console.log(data);
+  }, [data]);
   const getRandomData = async () => {
     const res = await axios.get(
       'https://api.nasa.gov/planetary/apod?count=1&api_key=dnnDtxf50g4Q3eTOaedSyJKopIwXT0v7akqYh9Y3'
     );
-
-    setData(res.data[0]);
+    const newDate: any = DateTime.fromISO(res.data[0].date).toLocaleString(
+      DateTime.DATE_FULL
+    );
+    setData({ ...res.data[0], date: newDate });
+    console.log(newDate);
+    console.log(data);
   };
-  const newDate = DateTime.fromISO(data.date).toLocaleString(
-    DateTime.DATE_FULL
+  const Player = ({ className }) => (
+    // console.log(props)
+    <ReactPlayer
+      url={data.url}
+      className={className}
+      playing
+      width="100%"
+      height="100%"
+      controls={true}
+      muted
+    />
   );
-  console.log(newDate);
-  console.log(data);
+
+  const AbsolutelyPositionedPlayer = styled(Player)`
+    position: absolute;
+    top: 0;
+    left: 0;
+  `;
+
+  const RelativePositionWrapper = styled.div`
+    position: relative;
+    padding-top: 56.25%;
+  `;
+
+  const ResponsiveStyledPlayer = () => (
+    <RelativePositionWrapper>
+      <AbsolutelyPositionedPlayer />
+    </RelativePositionWrapper>
+  );
   return data ? (
     <div className={styles.container}>
       <Head>
@@ -40,7 +80,7 @@ const Home: NextPage = () => {
       </Head>
 
       <Header />
-      <main className="border-8 border-purple-900 lg:p-8 lg:flex md:flex-col md:items-center lg:justify-center sm:p-0 ">
+      <main id="main-container" className="">
         <section className="" id="btnContainer">
           <Button variant="outlined" onClick={() => getRandomData()}>
             Get a Random Image
@@ -50,16 +90,20 @@ const Home: NextPage = () => {
           <h1 className="text-2xl font-bold m-3 text-center">{data.title}</h1>
 
           <div className={styles.imgContainer}>
-            <Image
-              priority
-              width={1080}
-              height={810}
-              src={data.hdurl}
-              alt={data.title}
-            />
+            {data.media_type === 'image' ? (
+              <Image
+                priority
+                width={1080}
+                height={810}
+                src={data.hdurl}
+                alt={data.title}
+              />
+            ) : (
+              <ResponsiveStyledPlayer />
+            )}
             {data.copyright && <p>© {data.copyright}</p>}
           </div>
-          <p>{newDate}</p>
+          <p>{data.date}</p>
           <h2 className="border-4 border-white lg:p-4 ">{data.explanation}</h2>
         </section>
       </main>
