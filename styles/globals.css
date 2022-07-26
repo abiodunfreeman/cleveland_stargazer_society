@@ -30,7 +30,7 @@ body {
   gap: 1rem;
 }
 
-/* line 30, ../../../Documents/GitHub/cleveland_stargazer_society/styles/scss/globals.scss */
+/* line 31, ../../../Documents/GitHub/cleveland_stargazer_society/styles/scss/globals.scss */
 #btnContainer {
   display: flex;
   width: 100%;
@@ -38,9 +38,8 @@ body {
   padding: 2rem;
 }
 
-/* line 37, ../../../Documents/GitHub/cleveland_stargazer_society/styles/scss/globals.scss */
+/* line 38, ../../../Documents/GitHub/cleveland_stargazer_society/styles/scss/globals.scss */
 #main-container {
-  border: 6px solid blue;
   display: flex;
   flex-direction: column;
   align-items: center;

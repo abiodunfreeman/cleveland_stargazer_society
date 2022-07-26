@@ -2,7 +2,7 @@ import type { NextPage } from 'next';
 
 export const Header: NextPage = () => {
   return (
-    <header className="border-8 border-red-600 p-8 m-8">
+    <header className="p-8 m-8">
       <h1 className="text-center font-bold text-3xl">
         Cleveland Stargazer Society
       </h1>

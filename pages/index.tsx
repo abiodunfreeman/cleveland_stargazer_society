@@ -83,7 +83,7 @@ const Home: NextPage = () => {
 
       <Header />
       <main id="main-container" className="">
-        <section className="" id="btnContainer">
+        <section className="flex justify-center" id="btnContainer">
           <Button variant="outlined" onClick={() => getRandomData()}>
             Get a Random Image
           </Button>
@@ -106,7 +106,7 @@ const Home: NextPage = () => {
             {data.copyright && <p>© {data.copyright}</p>}
           </div>
           <p>{data.date}</p>
-          <h2 className="border-4 border-white lg:p-4 ">{data.explanation}</h2>
+          <h2 className=" ">{data.explanation}</h2>
         </section>
       </main>
     </div>
