@@ -32,7 +32,7 @@ body {
 
 /* line 31, ../../../Documents/GitHub/cleveland_stargazer_society/styles/scss/globals.scss */
 .f {
-  border: 3px solid white;
+  border: 3px solid lightblue;
   display: flex;
   flex-direction: column;
   text-align: center;
