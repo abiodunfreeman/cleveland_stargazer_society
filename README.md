@@ -4,7 +4,7 @@ A single page web application that displays a new picture each and every day wit
 
 **Link to project:** http://cleveland-stargazer-society.vercel.app
 
-![alt tag](http://placecorgi.com/1200/650)
+![alt tag](assets/pic.png)
 
 ## How It's Made:
 
