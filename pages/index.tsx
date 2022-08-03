@@ -94,6 +94,21 @@ const Home: NextPage = () => {
 
       <Header />
       <main id="main-container" className="">
+        <p className=" text-center max-w-xl">
+          Welcome to the{' '}
+          <span className="font-bold underline">
+            Cleveland Stargazer Society
+          </span>
+          , where we revel in the raw awesomeness and craziness that is our
+          universe !
+          <br />
+          <br />
+          Every day NASA provides a new and interesting picture or video of our
+          wonderful galaxy along with details about it from an expert.
+          <br />
+          <br />
+          Try getting a random image or entering your birthday !
+        </p>
         <section className="flex justify-center" id="btnContainer">
           <Button variant="outlined" onClick={() => getRandomData()}>
             Get a Random Image
